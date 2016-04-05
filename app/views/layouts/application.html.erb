@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Grammable</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Grammable</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
 <% if current_user %>
   You're signed in as <%= current_user.email %>.
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
